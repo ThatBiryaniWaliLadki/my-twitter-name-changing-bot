@@ -1,19 +1,18 @@
 # Short code
 import tweepy
-consumer_key = 'kg5MaWSyuM2yKcJuXmjrq7eCk'
-consumer_secret = 'XHcELNRB1qr2ZXouiBcQWyz95C8RY0WK9tt4Npn5YGEtNqvYcV'
-access_token = '1297164703110582274-HRFFBP4VNHSNss4u0npVcOYwpVBf6J'
-secret_access_token = 'GgibeHs5ntOovfWFJOHuG9e88CnzNp7wSYqVCr6qyuTJO'
+api_key = '5yzVD5AevD0iS1Vtq8xdtjTHM'
+api_secret_key = 'wm4qfl0T8eQZJil1BZiTrIpgmbpOtCeJSxZ5KqCYpb9OCJy5nR'
+access_token='1298472286278696960-KofXQp0X6uQ4x40zxZaB0J5MttcuRr'
+access_token_secret= '1pjsFSdPEroro5sAltriSYvNFF9wHEMo3QUssnNnf1yp2'
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, secret_access_token)
+auth = tweepy.OAuthHandler(api_key, api_secret_key)
+auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
-print('Everything is fine')
 
 import time
 while True:
-  user = api.get_user('Ameen91741779')
-  f = user.followers_count
-  api.update_profile(name=f'AMEER {f} Followers')
-  print(f'AMEER {f} Followers')
+  user = api.get_user('AnanyaMallik3')
+  follower= user.followers_count
+  api.update_profile(name= f'Ananya {follower} follows')
+  print(f'Ananya {follower} follows')
   time.sleep(60)
